@@ -8,9 +8,10 @@ class ListsController < ActionController::Base
   end
 
   def create
-    @list = List.new(title: params[:list][:title])
-    @task = @list.tasks.new(title: params[:task][:title], content: params[:task][:content])
-   binding.pry
+    #binding.pry
+    @list = List.new(list_params)
+    @task = @list.tasks.new(title: params[:list][:title], content: params[:list][:task][:content])
+
     if @list.save && @task.save
       redirect_to list_path(@list)
     else

@@ -1,9 +1,9 @@
 <%= form_for @list do |l| %>
-  <%= l.text_field :title %><br>
+  Name List:<%= l.text_field :title %><br>
 
   <%= l.fields_for :task do |t| %>
-  <%= t.text_field :title %><br>
-  <%= t.text_field :content %><br>
+  Task Title:<%= t.text_field :title %><br>
+  Task Content:<%= t.text_field :content %><br>
 <% end %>
 
   <%= l.submit %>
