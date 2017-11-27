@@ -1,5 +1,6 @@
 class ListsController < ActionController::Base
   def index
+  #  binding.pry
   end
 
   def new
