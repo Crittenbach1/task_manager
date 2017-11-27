@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create, :show]
 
     resources :groups do
-      resources :lists, only: [:index, :new, :show]
+      resources :lists, only: [:index, :new, :create, :show]
     end
+
+    resources :lists, only: [:index, :new, :create, :show]
 
 
   devise_for :users

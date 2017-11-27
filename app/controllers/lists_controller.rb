@@ -9,7 +9,7 @@ class ListsController < ActionController::Base
 
   def create
     @list = List.new(list_params)
-  #  binding.pry
+   binding.pry
     if @list.save
       redirect_to list_path(@list)
     else
@@ -24,7 +24,7 @@ class ListsController < ActionController::Base
   private
 
       def list_params
-        params.require(:list).permit(:title)
+        params.require(:list).permit(:title, :content, :task_attributes)
       end
 
 end
