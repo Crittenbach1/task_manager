@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :groups, only: [:index, :new, :create]
-  
+  resources :groups, only: [:index, :new, :create, :show]
+
   devise_for :users
 
   devise_scope :user do
