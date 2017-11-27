@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create, :show]
 
+    resources :groups do
+      resources :lists, only: [:index, :new, :show]
+    end
+
+
   devise_for :users
 
   devise_scope :user do
