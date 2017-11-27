@@ -1,15 +1,9 @@
 <%= form_for @list do |l| %>
-  <%= l.text_field :title %>
+  <%= l.text_field :title %><br>
 
   <%= l.fields_for :task do |t| %>
-  <%= t.text_field :title %>
-  <%= t.text_field :content %>
-  <%= t.text_field :title %>
-  <%= t.text_field :content %>
-  <%= t.text_field :title %>
-  <%= t.text_field :content %>
-  <%= t.text_field :title %>
-  <%= t.text_field :content %>
+  <%= t.text_field :title %><br>
+  <%= t.text_field :content %><br>
 <% end %>
 
   <%= l.submit %>
