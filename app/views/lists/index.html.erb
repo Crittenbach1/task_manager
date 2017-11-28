@@ -1,0 +1,6 @@
+<%@group.lists.each do |l| %>
+  <%= "#{l.title}" %><br>
+   <% l.tasks.each do |t| %>
+     <ul><li><%= "#{t.title} - completed? : #{t.completed}"%></li></ul>
+  <%end%>
+<%end%>

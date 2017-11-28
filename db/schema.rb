@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127000821) do
+ActiveRecord::Schema.define(version: 20171128013543) do
 
   create_table "groups", force: :cascade do |t|
     t.string "title"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20171127000821) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.integer "user_id"
     t.integer "list_id"
     t.string "title"
     t.string "content"

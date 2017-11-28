@@ -1,7 +1,7 @@
 <%= form_for @list do |l| %>
   Name List:<%= l.text_field :title %><br>
-
-  <%= l.fields_for :task do |t| %>
+  <%= l.hidden_field(:group_id, :value => @list.group_id) %>
+  <%= l.fields_for :tasks do |t| %>
   Task Title:<%= t.text_field :title %><br>
   Task Content:<%= t.text_field :content %><br>
 <% end %>
